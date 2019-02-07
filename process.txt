@@ -1,0 +1,10 @@
+SETUP
+    set up server/public files 
+    set up express
+    connect to local host 5000
+
+
+HTML CONTENT
+    base
+    stretch
+
