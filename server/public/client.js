@@ -36,6 +36,9 @@ function getNewPlayer() {
         method: 'GET'
     }).then(function(response){
         console.log('response', response);
-        
+        // display new player on list
+        $('#newPlayersList').append(`
+        <li>New Player</li>
+        `);
     })
 } // end getNewPlayer
