@@ -9,13 +9,11 @@ HTML CONTENT
 
 BASE GOALS
 input:
+    create players data in server
     when add player is clicked
-        store players array in players.js and export
-        require players.js
-        make get request and send
-
-    get new player name
+    add player to server
 output: 
-    display in unordered list
+    get player from server
+    post player on list
 
 
