@@ -3,8 +3,19 @@ SETUP
     set up express
     connect to local host 5000
 
-
 HTML CONTENT
     base
     stretch
+
+BASE GOALS
+input:
+    when add player is clicked
+        store players array in players.js and export
+        require players.js
+        make get request and send
+
+    get new player name
+output: 
+    display in unordered list
+
 

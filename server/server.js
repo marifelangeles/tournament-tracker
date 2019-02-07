@@ -8,3 +8,10 @@ app.listen(PORT, () => {
 });
 
 app.use(express.static('server/public') );
+
+let players = require('./module/players')
+
+app.get('/players', (req, res) => {
+    res.send(players);    
+});
+
