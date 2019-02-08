@@ -28,8 +28,8 @@ STRETCH GOALS
 Add Game
 input:
     x create object with player, player score, opponent, opponent score on server
-    when add game is clicked
-    add players and scores to server
+    x when add game is clicked
+    x add players and scores to server
 output:
     get game results from server
     run determine winner function 

@@ -11,6 +11,8 @@ function docReady() {
     // when add player is clicked
     $('#addPlayerButton').on('click', handleAddNewPlayer);
 
+    // when add game is clicked
+    $('#addGameButton').on('click', addGameResults);
     
 
 }// end docReady
@@ -41,7 +43,7 @@ function getNewPlayer() {
 
     //empty new player input field
     $('#newPlayerInput').val('');
-    
+
     // get players from server
     $.ajax({
         url: '/players',
@@ -62,6 +64,28 @@ function getNewPlayer() {
             <option>${player}</option>
             `);
         });
-
     })
 } // end getNewPlayer
+
+function addGameResults() {
+    console.log('in addGameResults');
+    
+    // target scores input values and create object
+    const newGame = {
+        playerNameInput: $('#playerNameInput').val(),
+        playerScoreInput: $('#playerScoreInput').val(),
+        opponentNameInput: $('#opponentNameInput').val(),
+        opponentScoreInput: $('#opponentScoreInput').val()
+    }
+    console.log('newGame:', newGame);
+    
+    // push object to server
+    $.ajax({
+        url:'/gameResults',
+        method: 'POST',
+        data: {
+            newGame
+        }
+    });
+
+}// end addGameResults
