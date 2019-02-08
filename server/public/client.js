@@ -79,13 +79,53 @@ function addGameResults() {
     }
     console.log('newGame:', newGame);
     
-    // push object to server
+    // add object to server
     $.ajax({
         url:'/gameResults',
         method: 'POST',
-        data: {
-            newGame
-        }
+        data: newGame
+    }).then(function(response){
+        console.log('get game results');
+        
+        //display players, scores, and winner on game table
+        getGameResults();
+
+        
     });
 
 }// end addGameResults
+
+function getGameResults() {
+    console.log('in getGameResults');
+    
+    //get game results from server
+    $.ajax({
+        url: '/gameResults',
+        method: 'GET'
+    }).then(function(response){
+        console.log('response', response);
+        
+        // empty table
+        $('#resultsTable').empty();
+
+        //calculate winner
+        // get this player score and this opponent score
+        //console.log(response[response.length-1].playerNameInput);
+        let thisPlayerScore = response[response.length - 1].playerScoreInput;
+        let thisOpponentScore = response[response.length - 1].opponentScoreInput;
+        let thisPlayerName = response[response.length - 1].playerNameInput;
+        let opponentName = response[response.length - 1].opponentNameInput;
+        let winner;
+        
+        // if player score is > opponent score, player wins
+        // else if player score is < opponent score, opponent wins
+        if (thisPlayerScore > thisOpponentScore) {
+            winner = thisPlayerName;
+        } else if (thisPlayerScore < thisOpponentScore) {
+            winner = opponentName
+        };
+        console.log('winner', winner);
+        
+        
+    })
+}// end getGameResults

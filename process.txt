@@ -31,8 +31,8 @@ input:
     x when add game is clicked
     x add players and scores to server
 output:
-    get game results from server
-    run determine winner function 
+    x get game results from server
+    calculate winner
     display players, scores, and winner on game table
 
 Determine Winner Function
