@@ -8,6 +8,8 @@ HTML CONTENT
     stretch
 
 BASE GOALS
+
+Add new player
 input:
     create players data in server
     when add player is clicked
@@ -16,4 +18,20 @@ output:
     get player from server
     post player on list
 
+STRETCH GOALS
 
+Add Game
+input:
+    create object with player, player score, opponent, opponent score
+    when add game is clicked
+    add players and scores to server
+output:
+    get game results from server
+    run determine winner function 
+    display players, scores, and winner on game table
+
+Determine Winner Function
+input:
+    compare player score and opponent score
+output:
+    return winner
