@@ -23,3 +23,9 @@ app.post('/players', (req, res) => {
     res.sendStatus(201);
 });
 
+//create object with player, player score, opponent, opponent score
+let gameResults = require('./module/gameResults')
+
+app.get('/results', (req, res) => {
+    res.send(gameResults);
+});

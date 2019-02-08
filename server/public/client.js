@@ -6,6 +6,10 @@ function docReady() {
     console.log('jq');
     // when add player is clicked
     $('#addPlayerButton').on('click', handleAddNewPlayer);
+
+    //when add game is clicked
+    
+
 }// end docReady
 
 function handleAddNewPlayer(){

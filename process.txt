@@ -11,18 +11,27 @@ BASE GOALS
 
 Add new player
 input:
-    create players data in server
-    when add player is clicked
-    add player to server
+    x create players data in server
+    x when add player is clicked
+    x add player to server
 output: 
-    get player from server
-    post player on list
+    x get player from server
+    x post player on list
+
 
 STRETCH GOALS
 
+Game Setup
+input:
+    get players list
+    
+output:
+    append names on player dropdown
+    append names on opponent dropdown
+
 Add Game
 input:
-    create object with player, player score, opponent, opponent score
+    x create object with player, player score, opponent, opponent score on server
     when add game is clicked
     add players and scores to server
 output:
