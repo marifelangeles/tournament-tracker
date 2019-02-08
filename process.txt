@@ -17,17 +17,12 @@ input:
 output: 
     x get player from server
     x post player on list
+    append names on player dropdown
+    append names on opponent dropdown
 
 
 STRETCH GOALS
-
-Game Setup
-input:
-    get players list
     
-output:
-    append names on player dropdown
-    append names on opponent dropdown
 
 Add Game
 input:

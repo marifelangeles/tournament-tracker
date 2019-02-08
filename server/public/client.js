@@ -4,10 +4,13 @@ $(document).ready(docReady);
 
 function docReady() {
     console.log('jq');
+
+    // get players list on load
+    getNewPlayer(); 
+    
     // when add player is clicked
     $('#addPlayerButton').on('click', handleAddNewPlayer);
 
-    //when add game is clicked
     
 
 }// end docReady
@@ -42,12 +45,18 @@ function getNewPlayer() {
         console.log('response', response);
         // empty list
         $('#newPlayersList').empty();
+        $('.gamesInput').empty();
         // loop through response, for each player...
         response.forEach(function(player) {
             // display new player on list
             $('#newPlayersList').append(`
             <li>${player}</li>
             `);
+            // append to player and dropdown classes
+            $('.gamesInput').append(`
+            <option>${player}</option>
+            `);
         });
+
     })
 } // end getNewPlayer
